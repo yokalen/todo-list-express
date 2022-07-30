@@ -1,23 +1,25 @@
-<!DOCTYPE html> 
+<!DOCTYPE html> <!-- tell browser this is html -->
+<html lang="en"> <!-- language is english -->
+<head><!--beginning of document, not displayed-->
+    <meta charset="UTF-8"><!--character set-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--browser settings-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--viewport settigs-->
+    <title>To-Do List Express</title><!--title-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><!--font awesome style link-->
+    <link rel="stylesheet" href="css/style.css"><!--our style link-->
+</head><!--end of non-displayed beginning section of page-->
+<body><!--start the main displayed section of the page-->
+    <!-- some duplicate code that shouldn't be here
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body> -->
+<body> 
+    end of duplicate code we commented out -->
     <h1>Todo List: </h1><!--main page heading-->
     <ul class="todoItems"><!--create list-->
     <% for(let i=0; i < items.length; i++) {%><!--start a for loop-->
@@ -32,16 +34,16 @@
     <% } %><!--end for loop-->
     </ul><!--end list-->
 
-    <h2>Left to do: <%= left %></h2><!--secondary heading-->
+    <h2>Left to do: <%= left %></h2><!--secondary heading shows how many tasks are left-->
 
-    <h2>Add A Todo:</h2>
+    <h2>Add A Todo:</h2><!--seconday heading that describes form below-->
 
-    <form action="/addTodo" method="POST">
-        <input type="text" placeholder="Thing To Do" name="todoItem">
-        <input type="submit">
-    </form>
+    <form action="/addTodo" method="POST"><!--we will create something using the input below-->
+        <input type="text" placeholder="Thing To Do" name="todoItem"><!--textbox where we can type our todo-->
+        <input type="submit"><!--button to create todo-->
+    </form><!---->
     
 
-    <script src='js/main.js'></script>
-</body>
-</html>
+    <script src='js/main.js'></script><!--connect our (client side)interactions-->
+</body><!--end of visible page-->
+</html><!--end of document-->
