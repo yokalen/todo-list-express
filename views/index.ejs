@@ -20,19 +20,19 @@
 <body> -->
     <h1>Todo List: </h1><!--main page heading-->
     <ul class="todoItems"><!--create list-->
-    <% for(let i=0; i < items.length; i++) {%>
-        <li class="item">
-            <% if(items[i].completed === true) {%>
-                <span class='completed'><%= items[i].thing %></span>
-            <% }else{ %>
-                <span><%= items[i].thing %></span>
-            <% } %>    
-            <span class='fa fa-trash'></span>
-        </li>
-    <% } %>
-    </ul>
+    <% for(let i=0; i < items.length; i++) {%><!--start a for loop-->
+        <li class="item"><!--create a list item-->
+            <% if(items[i].completed === true) {%><!--condition if list item is completed-->
+                <span class='completed'><%= items[i].thing %></span><!--assign completed class and display-->
+            <% }else{ %><!--condition is not completed-->
+                <span><%= items[i].thing %></span><!--display without assigning the class-->
+            <% } %>    <!--end the conditional-->
+            <span class='fa fa-trash'></span><!--add a trash can-->
+        </li><!--end of the list item-->
+    <% } %><!--end for loop-->
+    </ul><!--end list-->
 
-    <h2>Left to do: <%= left %></h2>
+    <h2>Left to do: <%= left %></h2><!--secondary heading-->
 
     <h2>Add A Todo:</h2>
 
